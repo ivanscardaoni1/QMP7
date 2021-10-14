@@ -1,0 +1,125 @@
+1. Como usuarie de QueMePongo quiero ver todas las prendas que tengo en mi guardarropas desde el navegador para poder administrarlas
+
+http://www.queMePongo.com/prendas
+
+Método: GET
+
+Respuesta posible: 200 OK
+
+Body de respuesta posible:
+
+[
+  {
+    "id": 1,
+    "tipo": “unTipo”,
+    "talle": unTalle
+  },
+  {
+    "id": 2,
+    "tipo": “unTipo”,
+    "talle": otroTalle
+  },
+  {
+    "id": 3,
+    "tipo": “otroTipo”,
+    "talle": unTalle
+  },
+  {
+    "id": 4,
+    "tipo": “otroTipo”,
+    "talle": otroTalle
+  },
+  ...
+]
+
+2. Como usuario de QueMePongo, quiero crear una prenda desde el navegador
+
+https://www.queMePongo.com/prendas/ --data { "tipo": “unTipo”, "talle": “unTalle” } -H Content-Type: application/json
+
+Método: POST
+
+Respuesta posible: 201 Created
+
+Body de respuesta posible: 
+{
+  "tipo": “unTipo”,
+  "talle": “unTalle”,
+  "id": 25
+}
+
+3. Como usuarie de QueMePongo quiero ver una prenda en particular que tengo en mi guardarropas para poder editarla
+
+https://www.queMePongo.com/prendas/{id}
+
+Método: GET
+
+Respuesta posible: 200 OK
+
+Body de respuesta posible:
+{
+“tipo”:”unTipo”,
+“talle”:”unTalle”,
+“id”:”{id}”
+}
+
+4. Como usuarie de QueMePongo, quiero poder eliminar una prenda de mi guardarropas
+
+https://www.queMePongo.com/prendas/{id}
+
+Método: DELETE
+
+Respuesta posible: 200 OK
+
+Body de respuesta posible:
+{ }
+
+5. Como usuarie de QueMePongo, quiero poder ver mis eventos para administrarlos
+
+http://www.queMePongo.com/eventos
+
+Método: GET
+
+Respuesta posible: 200 OK
+
+Body de respuesta posible:
+[
+{
+“id”:”idEvento1”
+Otros atributos del evento
+},
+{
+“id”:”idEvento2”
+Otros atributos del evento
+}, …
+]
+
+6. Como usuario de QueMePongo, quiero poder abrir las sugerencias de prendas para un evento en mi navegador
+
+http://www.queMePongo.com/eventos/{id}/sugerencias
+
+Método: GET
+
+Respuesta posible: 200 OK
+
+Body de respuesta posible:
+
+[
+{
+“id”:”idSugerencia”
+Otros atributos de la sugerencia
+},
+{
+“id”:”idSugerencia2”
+Otros atributos de la sugerencia
+}, …
+]
+
+
+
+
+
+
+
+
+
+
